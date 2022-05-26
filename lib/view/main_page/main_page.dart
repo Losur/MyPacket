@@ -28,7 +28,7 @@ class _MainPage extends State<MainPage> {
                           alignment: Alignment.centerLeft,
                           child: Container(
                             margin: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-                            child: const TextTitle.normalWeight("Ideas for breakfast")
+                            child: const TextTitle.onlyText("Ideas for breakfast")
                           )
                       ),
                       const BigProductMultipleRow([

@@ -20,7 +20,7 @@ class _BigProductRow extends State<BigProductRow> {
             alignment: Alignment.centerLeft,
             child: Container(
               margin: const EdgeInsets.only(bottom: 12.0),
-              child: TextRegular(widget.title, FontWeight.w600)
+              child: TextTitle.customWeight(widget.title, FontWeight.w600)
             )
         ),
         SizedBox(

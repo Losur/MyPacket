@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/search/
     - assets/product_card/
+    - assets/images/
     - assets/
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

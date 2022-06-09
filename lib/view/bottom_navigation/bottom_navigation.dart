@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_packet/view/search_page/sarch_page.dart';
+import '../../view/news_page/news_page.dart';
+import '../../view/search_page/search_page.dart';
 import '../main_page/main_page.dart';
 import '../../projectColors.dart';
-import '../../main.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,7 +13,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex=0;
-  final List _screens=[MainPage(), const SearchPage()];
+  final List _screens=[MainPage(),
+    NewsPage(),
+    const SearchPage()
+  ];
 
   void _updateIndex(int value) {
     setState(() {
@@ -29,7 +32,9 @@ class _HomeState extends State<Home> {
         toolbarHeight: 0,
         elevation: 0,
       ),
-      body: _screens[_currentIndex], backgroundColor: const Color(ProjectColors.backgroundColor),
+      body: SafeArea(
+        child: _screens[_currentIndex],
+      ), backgroundColor: const Color(ProjectColors.backgroundColor),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
@@ -44,6 +49,9 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.shopping_cart_outlined),
 
           ),
+          BottomNavigationBarItem(
+              label: "News",
+              icon: Icon(Icons.list)),
           BottomNavigationBarItem(
             label: "Search",
             icon: Icon(Icons.search),
